@@ -19,9 +19,9 @@
  * Настройки HTML вида
  */
 $config['view']['skin']        = 'synio';                                                              // шаблон(скин)
-$config['view']['name']        = 'Your Site';                   // название сайта
-$config['view']['description'] = 'Description your site'; // seo description
-$config['view']['keywords']    = 'site, google, internet';      // seo keywords
+$config['view']['name']        = 'SaveUA';                   // название сайта
+$config['view']['description'] = 'общественный интелектуально-экспертный портал'; // seo description
+$config['view']['keywords']    = 'политический кризис в Украине и способы из него выйти.';      // seo keywords
 $config['view']['tinymce']         = false;  // использовать или нет визуальный редактор TinyMCE
 $config['view']['noindex']          = true;   // "прятать" или нет ссылки от поисковиков, оборачивая их в тег <noindex> и добавляя rel="nofollow"
 $config['view']['img_resize_width'] = 570;    // до какого размера в пикселях ужимать картинку по щирине при загрузки её в топики и комменты
@@ -71,10 +71,7 @@ $config['path']['root']['server']     = dirname(dirname(__FILE__));           //
 $config['path']['root']['engine']     = '___path.root.server___/engine';  // полный путь до сайта в файловой системе;
 $config['path']['root']['engine_lib'] = '___path.root.web___/engine/lib'; // полный путь до сайта в файловой системе
 $config['path']['static']['root']     = '___path.root.web___';            // чтоб можно было статику засунуть на отдельный сервер
-$config['path']['static']['skin']     = '___path.static.root___/templates/skin/___view.skin___';
-$config['path']['uploads']['root']    = '/uploads';                          // директория для загрузки файлов
-$config['path']['uploads']['images']  ='___path.uploads.root___/images';
-$config['path']['offset_request_url'] = 0;                                   // иногда помогает если сервер использует внутренние реврайты
+$config['path']['static']['skin']     = 0;                                   // иногда помогает если сервер использует внутренние реврайты
 /**
  * Настройки шаблонизатора Smarty
  */
