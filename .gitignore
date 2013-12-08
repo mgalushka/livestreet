@@ -1,7 +1,6 @@
-/application/config/config.local.php
-/application/config/config.test.php
-/application/logs/*
-/application/plugins/*
-/application/tmp/*
-/uploads/*
-/.idea/
+/uploads/
+/templates/cache/
+/templates/compiled/
+/logs/
+/tmp/
+/config/config.local.php
