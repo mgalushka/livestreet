@@ -9,17 +9,35 @@
 		<li {if $sMenuHeadItemSelect=='people'}class="active"{/if}><a href="{router page='people'}">{$aLang.people}</a> <i></i></li>
 		<li {if $sMenuHeadItemSelect=='stream'}class="active"{/if}><a href="{router page='stream'}">{$aLang.stream_menu}</a> <i></i></li>
 
+		{if $oUserCurrent}
+			<div class="header-button-wrap"> 
+				<a href="{router page='topic'}add/" class="button button-write" id="modal_write_show">{$aLang.block_create}</a><!--   js-write-window-show  -->
+			</div>
+		{/if}
+		
+		{*
+		<!-- TODO: add search later -->
+		<li>		
+			<div class="search-header-show" id="search-header-show"><i class="icon-synio-search"></i> <a href="#" class="link-dotted">{$aLang.search_submit}</a></div>
+			<form class="search-header-form" id="search-header-form" action="{router page='search'}topics/" style="display: none">
+				<input type="text" placeholder="{$aLang.search}" maxlength="255" name="q" class="input-text">
+				<input type="submit" value="" title="{$aLang.search_submit}" class="input-submit">
+			</form>
+		</li>
+		*}
+		
 		{hook run='main_menu_item'}
 
 		<li class="nav-main-more"><a href="#" id="dropdown-mainmenu-trigger" onclick="return false">{$aLang.more}</a></li>
 	</ul>
-
+		
 	<ul class="dropdown-nav-main dropdown-menu" id="dropdown-mainmenu-menu"></ul>
 
 	{hook run='main_menu'}
 	
 	
 	{hook run='userbar_nav'}
+	
 	
 	{if $oUserCurrent}
 		<div class="dropdown-user" id="dropdown-user">

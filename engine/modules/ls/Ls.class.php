@@ -110,7 +110,7 @@ class ModuleLs extends Module {
 			</script>
 		";
 
-		return $sCounter;
+		return ""; // TODO: add normal tracking code and replace with: $sCounter;
 	}
 	/**
 	 * Отправка данных на шлюз LS
