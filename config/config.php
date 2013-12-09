@@ -415,10 +415,10 @@ $config['router']['config']['action_not_found'] = 'error';
  */
 $config['block']['rule_index_blog'] = array(
 	'action'  => array(
-			'index', 'blog' => array('{topics}','{topic}','{blog}')
+			'index', 'blog' => array('{topics}','{topic}'/*,'{blog}'*/)
 		),
 	'blocks'  => array(
-			'right' => array('stream'=>array('priority'=>100),'tags'=>array('priority'=>50),'blogs'=>array('params'=>array(),'priority'=>1))
+			'right' => array('stream'=>array('priority'=>100),'tags'=>array('priority'=>50)/*,'blogs'=>array('params'=>array(),'priority'=>1)*/)
 		),
 	'clear' => false,
 );

@@ -16,6 +16,8 @@
 				<a href="{router page='topic'}add" class="write-item-image"></a>
 				<a href="{router page='topic'}add" class="write-item-link">{$aLang.block_create_topic_topic}</a>
 			</li>
+			
+			{if $oUserCurrent->isAdministrator()} 
 			<li class="write-item-type-blog">
 				<a href="{router page='blog'}add" class="write-item-image"></a>
 				<a href="{router page='blog'}add" class="write-item-link">{$aLang.block_create_blog}</a>
@@ -24,6 +26,8 @@
 				<a href="{router page='talk'}add" class="write-item-image"></a>
 				<a href="{router page='talk'}add" class="write-item-link">{$aLang.block_create_talk}</a>
 			</li>
+			{/if}
+			
 			{hook run='write_item' isPopup=true}
 		</ul>
 	</div>
