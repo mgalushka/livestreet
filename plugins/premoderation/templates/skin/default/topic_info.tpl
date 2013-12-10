@@ -1,0 +1,2 @@
+<li><a href="{router page='premoderation'}approve/{$iTopicId}" class="approve">{$aLang.plugin.premoderation.premoderation_aproove}</a></li>
+<li><a href="{router page='premoderation'}disapprove/{$iTopicId}" class="approve">{$aLang.plugin.premoderation.premoderation_disaproove}</a></li>

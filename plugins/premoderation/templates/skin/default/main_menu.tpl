@@ -1,0 +1,1 @@
+<li {if $sAction==$oConfig->GetValue("plugin.premoderation.url")}class="active"{/if}> <a href="{router page='premoderation'}">{$aLang.plugin.premoderation.premoderation_main_menu_title} ({$iTopicsCount})</a><i></i> </li>
