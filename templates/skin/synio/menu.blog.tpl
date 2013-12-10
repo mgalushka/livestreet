@@ -1,8 +1,10 @@
 <div class="container">
 	<div class="pitch-image">
-		<img src="{cfg name='path.static.skin'}/images/where.jpg" alt="Where" />
+		<img src="{cfg name='path.static.skin'}/images/where.png" alt="Where" />
 	</div>
 	{$aLang.pitch_top_header}	
+	
+	<h3><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.register_to_post_solution}</a></h3>
 </div>
 
 {*
