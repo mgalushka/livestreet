@@ -4,7 +4,11 @@
 	</div>
 	{$aLang.pitch_top_header}	
 	
-	<h3><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.register_to_post_solution}</a></h3>
+	
+	{if !$oUserCurrent}
+		{* show only if this is not logged in user *}
+		<h3><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.register_to_post_solution}</a></h3>
+	{/if}
 </div>
 
 {*

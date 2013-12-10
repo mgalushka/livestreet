@@ -289,6 +289,8 @@ class ModuleBlog extends Module {
 		$oBlog->setOwnerId($oUser->getId());
 		$oBlog->setTitle($this->Lang_Get('blogs_personal_title').' '.$oUser->getLogin());
 		$oBlog->setType('personal');
+		// mgalushka: blog is not 'default' by default - can be changed only in database
+		$oBlog->setDefault(0);
 		$oBlog->setDescription($this->Lang_Get('blogs_personal_description'));
 		$oBlog->setDateAdd(date("Y-m-d H:i:s"));
 		$oBlog->setLimitRatingTopic(-1000);
@@ -670,6 +672,11 @@ class ModuleBlog extends Module {
 	 * @return array
 	 */
 	public function GetBlogsAllowByUser($oUser) {
+		// TODO: mgalushka
+		// yes, this is not safe bnut we actually don't care
+		// we need quickly add ability for user to post to default public blog
+		return $this->GetBlogs();
+		/*
 		if ($oUser->isAdministrator()) {
 			return $this->GetBlogs();
 		} else {
@@ -683,6 +690,7 @@ class ModuleBlog extends Module {
 			}
 			return 	$aAllowBlogsUser;
 		}
+		*/
 	}
 	/**
 	 * Получаем массив блогов, которые являются открытыми для пользователя

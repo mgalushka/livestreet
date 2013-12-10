@@ -11,7 +11,7 @@
 
 		{if $oUserCurrent}
 			<div class="header-button-wrap"> 
-				<a href="{router page='topic'}add/" class="button button-write" id="modal_write_show">{$aLang.block_create}</a><!--   js-write-window-show  -->
+				<a href="{router page='topic'}add/" class="button button-write {if $oUserCurrent->isAdministrator()}js-write-window-show{/if}" id="modal_write_show">{$aLang.block_create}</a><!--   js-write-window-show  -->
 			</div>
 		{/if}
 		

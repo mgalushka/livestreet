@@ -209,6 +209,14 @@ class ModuleBlog_EntityBlog extends Entity {
 			return Router::GetPath('blog').$this->getUrl().'/';
 		}
 	}
+	/**
+	 * mgalushka: is default blog
+	 *
+	 * @return string
+	 */
+	public function isDefault() {
+		return intval($this->_getDataOne('blog_default')) === 1;
+	}
 
 	/**
 	 * Устанавливает ID блога
@@ -362,5 +370,14 @@ class ModuleBlog_EntityBlog extends Entity {
 	public function setVote($data) {
 		$this->_aData['vote']=$data;
 	}
+	/**
+	 * Устанавливает значение - является ли этот блог дефолтным
+	 *
+	 * @param $data
+	 */
+	public function setDefault($data) {
+		$this->_aData['blog_default']=$data;
+	}
+	
 }
 ?>
